@@ -1,20 +1,15 @@
-@font-face {
-  font-family: 'name';
-  src: url('../assets/fonts/static/font-name.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'name;
-  src: url('../assets/fonts/static/font-name.ttf') format('truetype');
-  font-weight: 600;
-}
-
-
 :root {
-  --var: value;
-}
-
-@media only screen and (min-width: 600px) {
+  /* Primary */
+  --nutmeg: hsl(14, 45%, 36%);
+  --raspberry: hsl(332, 51%, 32%);
+  /* Neutrals - Dark */
+  --charcoal: hsl(24, 5%, 18%);
+  --grey-brown: hsl(30, 10%, 34%);
+  /* Neutrals - Light */
+  --light-gray: hsl(30, 18%, 87%);
+  --light-pink: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --white: hsl(0, 0%, 100%);
 }
 
 /***********/
@@ -23,19 +18,99 @@
 
 body {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  /* grid-template-rows: 1fr auto; */
+  /* grid-template-rows: auto 1fr auto; */
+  grid-template-rows: 1fr auto;
   justify-items: center;
   align-items: center;
-  background-image: url('../assets/images/');
+  /* background-image: url('../assets/images/'); */
+  background-color: var(--eggshell);
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: var(--charcoal);
+}
+
+.container {
+  background-color: var(--white);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-wrapper {
+  padding: 0 32px;
+}
+
+ul,
+ol {
+}
+
+.image-container {
+  margin-bottom: 2.5rem;
+}
+
+.header-text-container {
+  margin: 2rem 0;
+}
+
+.header-text-container h2 {
+  font-family: 'Young Serif', serif;
+  font-size: 2.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.callout-container {
+  background-color: var(--light-pink);
+  padding: 1.5rem;
+  /* margin: 2rem 0; */
+  border-radius: 16px;
+}
+
+.callout-container p {
+  font-size: 1.25rem;
+  color: var(--raspberry);
+  margin-bottom: 1rem;
+}
+
+.recipe-section {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--eggshell);
+}
+
+.section-wrapper:nth-of-type(3) > .recipe-section {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.recipe-heading {
+  font-size: 28px;
+  font-family: 'Young Serif', serif;
+  color: var(--nutmeg);
+  margin-bottom: 1.5rem;
 }
 
 .fm-byline {
+  padding-bottom: 1.75rem;
+}
+
+.fm-byline-text {
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-align: center;
 }
 
-.fm-byline,
-.fm-byline a {
+/* .fm-byline-text, */
+.fm-byline-text a {
+  color: var(--charcoal);
+}
+
+@media only screen and (min-width: 768px) {
+  .section-wrapper {
+    padding: 0 24px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-wrapper {
+    padding: 0 40px;
+  }
 }

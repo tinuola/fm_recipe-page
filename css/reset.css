@@ -61,7 +61,7 @@ svg {
 /* Remove list styles on ul, ol elements */
 ul,
 ol {
-  list-style: none;
+  /* list-style: none; */
 }
 
 /* Inherit fonts for inputs and buttons */
